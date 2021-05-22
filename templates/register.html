@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body style="margin: 0;padding: 0 ;background-color: black;">
+    <div style=" height:100vh;width:100vw;display:flex;justify-content:center;align-items:center">
+        <div style="background-color: lightgray;border-radius: 10px;height:60%;display:flex;position: relative;">
+            
+            
+                
+
+                <div style="justify-content:center;align-items:center ;margin-top:50px ">
+                    <h2 style="text-align:center">
+                            SignUp
+                    </h2>
+
+
+
+
+                
+
+
+                    <form action="" method="POST">
+                        {% csrf_token %}
+                        <table style="border-collapse: separate;border-spacing:15px ;margin: 0 auto;">
+                            <tr>
+
+                                <td> <label for="">Username</label></td>
+                                <td>{{form.username}}</td>
+
+                            </tr>
+                            <tr>
+
+
+                                <td> <label for="">Email</label></td>
+                                <td>{{form.email}}</td>
+
+                            </tr>
+                            <tr>
+
+                                <td> <label>Password</label></td>
+                                <td> {{form.password1}}</td>
+
+                            </tr>
+                            <tr>
+
+                                <td> <label>Password</label></td>
+                                <td>{{form.password2}} </td>
+
+                            </tr>
+
+                            <tr>
+                                <td colspan="2" align="center">
+                                    <input type="submit" value="Register">
+                                </td>
+                            </tr>
+
+
+                        </table>
+
+
+                    </form>
+                </div>
+
+            
+        </div>
+
+    </div>
+
+
+
+
+
+</body>
+
+</html>

@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> SignIn </title>
+</head>
+
+<body style="margin:0;padding:0;background-color: black;">
+
+    <div style="height:100vh;width:100vw;display:flex;justify-content:center;align-items:center;">
+        <div style="background-color: aquamarine;height:400px;width:250px;text-align:center;border-radius:15px;position:relative;">
+            <h2 style="margin-top: 70px;">SignIn</h2>
+            <div style="display:flex;justify-content:center;align-items:center;margin-top:50px;">
+
+                <div >
+                    <form action="" method="post">
+                        {% csrf_token %}
+
+
+                        <p> Username:<input type="text" name="username"></p>
+                        <p>Password:<input type="password" name="password"></p>
+                        <input type="submit" value="Login">
+
+                    </form>
+
+                    
+
+                </div>
+
+            </div>
+            <a href="{% url 'accounts:signup' }" style="left:25%;bottom:15px;position: absolute;">Create an Account</a>
+        </div>
+
+    </div>
+
+</body>
+
+</html>

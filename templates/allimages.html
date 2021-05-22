@@ -1,0 +1,18 @@
+{% extends 'index.html' %}
+
+
+{% block content  %}
+    <div style="display:flex; padding:30px;justify-content:space-between;align-items:center">
+
+
+ {% for i in images %} 
+ <div style="border:2px solid white;height:300px;width:300px;border-radius:10px ;overflow: hidden;text-align: center;" >
+    <img src="{{ i.picture.url }}" style="width:300px;height:200px;">
+    <p>Caption:{{ i.caption }}</p>
+    <p><a href="{% url 'home:api' i.id %}">{{ i.id }} </a></p>
+
+ </div>
+{% endfor %}
+</div>
+
+{% endblock %}
